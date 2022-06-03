@@ -67,17 +67,17 @@ public class CommissionEmployee {
 
     // calculate earnings
     public double earnings() {
-        return commissionRate * grossSales;
+        return getCommissionRate() * getGrossSales();
     }
 
     //return String representation of CommissionEmployee object
     @Override // indicates that method overrides a superclass method
     public String toString() {
         return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s:  %.2f",
-                "commission employee", firstName, lastName, "social security number",
-                socialSecurityNumber,
-                "gross sales", grossSales,
-                "commission rate", commissionRate);
+                "commission employee", getFirstName(), getLastName(), "social security number",
+                getSocialSecurityNumber(),
+                "gross sales", getGrossSales(),
+                "commission rate", getCommissionRate());
     }
 } // end class CommissionEmployee
 
